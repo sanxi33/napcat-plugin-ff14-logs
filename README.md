@@ -64,11 +64,6 @@
 - 依赖 FFLogs 页面结构，页面改版时可能失效
 - 字典文件为静态资源，后续版本更新时可能需要同步维护
 
-## 开源流程文档
-
-- [OPEN_SOURCE_CHECKLIST.md](./OPEN_SOURCE_CHECKLIST.md)
-- [NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md](./NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md)
-
 ## License
 
 MIT
