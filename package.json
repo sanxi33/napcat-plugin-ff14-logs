@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "main": "index.mjs",
-  "description": "FF14 Logs 百分位查询插件",
+  "description": "NapCat FF14 Logs 百分位查询插件",
   "author": "sanxi",
   "license": "MIT",
   "keywords": [
