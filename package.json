@@ -1,0 +1,28 @@
+{
+  "name": "napcat-plugin-ff14-logs",
+  "plugin": "ff14-logs",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.mjs",
+  "description": "FF14 Logs 百分位查询插件",
+  "author": "sanxi",
+  "license": "MIT",
+  "keywords": [
+    "napcat",
+    "plugin",
+    "ff14",
+    "fflogs",
+    "raids"
+  ],
+  "napcat": {
+    "tags": [
+      "游戏",
+      "工具"
+    ],
+    "minVersion": "4.14.0",
+    "homepage": "https://github.com/sanxi33/napcat-plugin-ff14-logs"
+  },
+  "dependencies": {
+    "napcat-types": "0.0.16"
+  }
+}

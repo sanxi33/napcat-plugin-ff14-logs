@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "commandPrefix": "球鳖",
+  "requestTimeoutMs": 10000,
+  "jobDictPath": "./data/job.json",
+  "bossDictPath": "./data/boss.json"
+}
