@@ -1,52 +1,34 @@
 # napcat-plugin-ff14-logs
 
-一个给 NapCat 用的 FF14 Logs 百分位查询插件。它适合已经在群里有 FF14 玩家，只想快速查某个 Boss、某个职业的大致表现，不想每次都自己去翻网页。
+一个为 NapCat 设计的 FF14 Logs 百分位查询插件。适合在群聊里快速查某个 Boss、某个职业的大致表现，不用每次都自己打开网页。
 
-## 这份 README 默认把你当作
+## 适用场景
 
-- 已经装好了 NapCat，会导入插件 zip
-- 会在群里发命令，但不想先看源码
-- 知道自己想查哪个 Boss、哪个职业
+- 在群聊中快速查询 FF14 Logs 百分位
+- 使用常见 Boss 简称和职业名直接查询
+- 不想额外准备 API Key
 
-## 这个插件适合谁
+## 环境要求
 
-适合：
+- 已部署 NapCat，并了解如何导入插件包 (`.zip`)
+- 知道要查询的 Boss 名或常见简称，例如 `p9s`
+- 知道要查询的职业名，例如 `武僧`
 
-- 想在群里快速查 FF14 Logs 百分位
-- 想用常见 Boss 简称和职业名直接查
-- 不想再额外配 API Key
+仓库内已附带职业和 Boss 字典，普通使用无需自己准备数据文件。
 
-不太适合：
-
-- 想做完整战斗分析的人
-- 想查很多自定义统计维度的人
-
-## 装之前要准备什么
-
-这个插件几乎没有额外前置要求。
-
-你只需要知道：
-
-- 要查的 Boss 名或常见简称，比如 `p9s`
-- 要查的职业名，比如 `武僧`
-
-仓库里已经带了职业字典和 Boss 字典，普通使用不用自己准备数据文件。
-
-## 安装
+## 安装步骤
 
 ### 1. 下载插件
 
-从 [Releases](https://github.com/sanxi33/napcat-plugin-ff14-logs/releases) 下载：
-
-- `napcat-plugin-ff14-logs.zip`
+前往 [Releases](https://github.com/sanxi33/napcat-plugin-ff14-logs/releases) 页面，下载最新版本的 `napcat-plugin-ff14-logs.zip`。
 
 ### 2. 导入 NapCat
 
-在 NapCat 插件管理里导入 zip，并启用插件。
+在 NapCat 的插件管理界面中导入 zip 文件，并启用插件。
 
-### 3. 保持默认配置先试
+### 3. 默认配置
 
-第一次建议先不要折腾配置，直接用默认值：
+插件首次运行将使用以下默认配置：
 
 ```json
 {
@@ -58,49 +40,45 @@
 }
 ```
 
-普通用户最常改的只有：
+一般只需要按需调整：
 
 - `commandPrefix`
 - `requestTimeoutMs`
 
-`jobDictPath` 和 `bossDictPath` 一般保持默认就够了。
+## 使用方法
 
-## 怎么用
-
-最简单的格式是：
+基础格式：
 
 ```text
 球鳖 ff14logs boss job
 ```
 
-例如：
+示例：
 
 ```text
 球鳖 ff14logs p9s 武僧
 球鳖 ff14logs p9s 武僧 0 rdps
 ```
 
-如果你只是第一次上手，**先记前三段就够了**：
+如果你只是第一次上手，先记住前三段就够了：
 
 - `ff14logs`
 - `boss`
 - `job`
 
-后面的 `day` 和 `dps_type` 是进阶参数，不懂可以先不填。
+## 验证安装
 
-## 第一次怎么确认自己装好了
-
-直接在群里试一条：
+发送以下命令测试插件是否正常工作：
 
 ```text
 球鳖 ff14logs p9s 武僧
 ```
 
-如果有正常返回结果，就说明插件已经能用了。
+若返回正常结果，即表示插件已成功运行。
 
-## 一键跳到 NapCat WebUI 安装页
+## 快捷安装链接
 
-如果你的 NapCat 版本是 `4.15.19` 或更高，可以直接点下面按钮跳到插件安装界面：
+NapCat 版本 ≥ `4.15.19` 时，可点击下方按钮快速跳转至插件安装页面：
 
 <a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-ff14-logs" target="_blank">
   <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
