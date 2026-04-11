@@ -1,7 +1,7 @@
 {
   "name": "napcat-plugin-ff14-logs",
   "plugin": "ff14-logs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "index.mjs",
   "description": "NapCat FF14 Logs 百分位查询插件",

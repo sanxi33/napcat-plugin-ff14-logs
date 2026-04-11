@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 const DEFAULT_CONFIG = {
   enabled: true,
-  commandPrefix: '球鳖',
+  commandPrefix: '/',
   requestTimeoutMs: 10000,
   jobDictPath: './data/job.json',
   bossDictPath: './data/boss.json'
@@ -57,7 +57,7 @@ function parseCmd(raw) {
   const rest = text.slice(text.toLowerCase().indexOf('ff14logs') + 'ff14logs'.length).trim();
   const parts = rest.split(/\s+/).filter(Boolean);
   if (parts.length !== 2 && parts.length !== 4) {
-    return { error: '格式：球鳖 ff14logs boss job [day dps_type]\n示例：球鳖 ff14logs p9s 武僧 0 rdps' };
+    return { error: '格式：/ff14logs boss job [day dps_type]\n示例：/ff14logs p9s 武僧 0 rdps' };
   }
   return {
     boss: parts[0],
@@ -167,7 +167,7 @@ export const plugin_init = async (ctx) => {
   logger = ctx.logger;
   plugin_config_ui = ctx.NapCatConfig.combine(
     ctx.NapCatConfig.boolean('enabled', '启用插件', true, '总开关'),
-    ctx.NapCatConfig.text('commandPrefix', '命令前缀', '球鳖', '例如：球鳖 ff14logs p9s 武僧'),
+    ctx.NapCatConfig.text('commandPrefix', '命令前缀', '/', '例如：/ff14logs p9s 武僧'),
     ctx.NapCatConfig.number('requestTimeoutMs', '请求超时(ms)', 10000, '1000-30000'),
     ctx.NapCatConfig.text('jobDictPath', '职业字典路径', DEFAULT_CONFIG.jobDictPath, '仓库内默认提供 ./data/job.json'),
     ctx.NapCatConfig.text('bossDictPath', 'Boss字典路径', DEFAULT_CONFIG.bossDictPath, '仓库内默认提供 ./data/boss.json')

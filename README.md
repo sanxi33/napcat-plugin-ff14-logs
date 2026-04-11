@@ -33,7 +33,7 @@
 ```json
 {
   "enabled": true,
-  "commandPrefix": "球鳖",
+  "commandPrefix": "/",
   "requestTimeoutMs": 10000,
   "jobDictPath": "./data/job.json",
   "bossDictPath": "./data/boss.json"
@@ -50,14 +50,14 @@
 基础格式：
 
 ```text
-球鳖 ff14logs boss job
+/ff14logs boss job
 ```
 
 示例：
 
 ```text
-球鳖 ff14logs p9s 武僧
-球鳖 ff14logs p9s 武僧 0 rdps
+/ff14logs p9s 武僧
+/ff14logs p9s 武僧 0 rdps
 ```
 
 如果你只是第一次上手，先记住前三段就够了：
@@ -71,7 +71,7 @@
 发送以下命令测试插件是否正常工作：
 
 ```text
-球鳖 ff14logs p9s 武僧
+/ff14logs p9s 武僧
 ```
 
 若返回正常结果，即表示插件已成功运行。
